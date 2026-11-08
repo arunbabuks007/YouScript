@@ -37,7 +37,7 @@ export function Layout() {
       <header className="nav">
         <div className="wrap nav-in">
           <Link to="/" className="brand" aria-label="YouScript home">
-            <img src="/favicon.png" alt="" width="36" height="36" />
+            <img src="/logo.png?v=3" alt="" width="36" height="36" />
             <span>You<b>Script</b></span>
           </Link>
           <nav className={'links' + (open ? ' open' : '')} aria-label="Main">
@@ -62,7 +62,7 @@ export function Layout() {
       <footer className="foot">
         <div className="wrap foot-in">
           <div>
-            <div className="brand"><img src="/favicon.png" alt="" width="32" height="32" /><span>You<b>Script</b></span></div>
+            <div className="brand"><img src="/logo.png?v=3" alt="" width="32" height="32" /><span>You<b>Script</b></span></div>
             <p className="muted" style={{ marginTop: 10, maxWidth: 340 }}>Read, search and download the transcript of any YouTube video. Free, private, no AI.</p>
           </div>
           <div className="foot-cols">

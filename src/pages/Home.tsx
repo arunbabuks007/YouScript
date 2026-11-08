@@ -45,7 +45,7 @@ export function Home() {
       <section className="hero">
         <div className="glow" aria-hidden="true" />
         <div className="wrap hero-in">
-          <img className="hero-logo" src="/logo-512.png" alt="YouScript – YouTube Transcript" width="132" height="132" />
+          <img className="hero-logo" src="/logo-512.png?v=3" alt="YouScript – YouTube Transcript" width="132" height="132" />
           <span className="pill"><Icon name="lock" size={14} /> Free · No account · No AI · 100% private</span>
           <h1>Every YouTube video, <span className="grad">in words.</span></h1>
           <p className="hero-sub">
