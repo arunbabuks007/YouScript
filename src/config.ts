@@ -4,9 +4,9 @@
  *  If your Netlify address is different, change the fallback below (or set VITE_SITE_URL in Netlify). */
 export const SITE_URL: string = (import.meta.env.VITE_SITE_URL as string | undefined)?.replace(/\/$/, '') || 'https://youscript-ytscript.netlify.app';
 
-/** The YouScript page on the Chrome Web Store. Until it is published this opens a store search; replace with the real
- *  listing address (https://chromewebstore.google.com/detail/<name>/<id>) once it exists. */
-export const STORE_URL = 'https://chromewebstore.google.com/search/YouScript%20YouTube%20Transcript';
+/** The YouScript page on the Chrome Web Store (published 2026-11). Every "Add to Chrome" button reads this. */
+export const STORE_URL = 'https://chromewebstore.google.com/detail/youscript-%E2%80%93-youtube-trans/afjkadehppclmlcklmmncmalmoehejcl';
+export const EXTENSION_ID = 'afjkadehppclmlcklmmncmalmoehejcl';
 
 export const CONTACT_EMAIL = 'arunbabuks03@gmail.com';
 export const SUPPORT_MAIL = `mailto:${CONTACT_EMAIL}?subject=YouScript%20support`;
