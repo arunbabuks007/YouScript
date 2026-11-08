@@ -121,7 +121,7 @@ export function Home() {
         kicker="Your way" title="Three switches. That’s all the settings."
         text="YouScript does one thing, so it has almost nothing to configure: load the transcript automatically, show timestamps, and follow the video while it plays. Turn each on or off from the toolbar icon."
         points={['Auto-load the transcript when a video opens', 'Show or hide timestamps', 'Follow along as the video plays']}
-        img={img('popup.png')} alt="The YouScript toolbar popup with three switches: load automatically, show timestamps and follow the video" w={340} h={330}
+        img={img('popup.png')} alt="The YouScript toolbar popup with three switches: load automatically, show timestamps and follow the video" w={340} h={440}
       />
 
       {/* ── no AI ── */}
