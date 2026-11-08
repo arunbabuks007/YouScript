@@ -329,3 +329,10 @@ textarea.field { resize: vertical; min-height: 78px; }
 @media (prefers-reduced-motion: reduce) {
   .booster *, .sitter { animation: none !important; }
 }
+
+/* ── "Enjoying …?" boost call-to-action on the home page: a centred card, like the final call-to-action ── */
+.boost-cta { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; max-width: 760px; margin: 0 auto; padding: 44px 28px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); }
+.boost-cta > div:not(.ico) { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.boost-cta h2 { margin: 0; }
+.boost-cta p { color: var(--muted); max-width: 520px; margin: 0; }
+.boost-cta .btn { margin-top: 6px; }
