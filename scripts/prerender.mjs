@@ -13,7 +13,7 @@ if (!template.includes('<!--app-html-->') || !template.includes('<!--head-->')) 
 
 const { render, ROUTES, SITE_URL, STORE_URL, homeJsonLd } = await import(pathToFileURL(path.resolve('dist-ssr/entry-server.js')).href);
 
-const NO_INDEX = new Set([]);                              // pages to keep out of search results
+const NO_INDEX = new Set(['/boost']);                       // a payment form is not something to rank
 const esc = s => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 
 function head({ path: p, title, description }, extra = '') {
@@ -89,6 +89,7 @@ fs.writeFileSync(path.join(dist, 'llms.txt'), `# YouScript – YouTube Transcrip
 - [Home](${SITE_URL}/): overview, screenshots and FAQ
 - [All features](${SITE_URL}/features): everything the card does
 - [Help & troubleshooting](${SITE_URL}/support): fixes and how to report a problem
+- [Boost](${SITE_URL}/boost): an optional tip for the developer
 - [Privacy policy](${SITE_URL}/privacy): what is stored and why each permission is needed
 - [Support](mailto:arunbabuks03@gmail.com): questions, bug reports and feature requests
 `);

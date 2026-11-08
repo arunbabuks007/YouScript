@@ -34,8 +34,16 @@ export const ROUTES: RouteMeta[] = [
     description: 'YouScript not showing a transcript or a language? Fix it in a minute with these steps, or email for help.',
   },
   {
+    path: '/boost',
+    title: 'Boost YouScript – support the developer',
+    description: 'YouScript is free. If it saved you time, send a small boost to help keep it improving.',
+  },
+  {
     path: '/privacy',
     title: 'Privacy Policy – YouScript',
     description: 'YouScript runs entirely in your browser: no servers, no tracking, no analytics. See exactly what it stores and why each permission is needed.',
   },
 ];
+
+/** The backend that records tips (shared with the developer's other apps; tips are tagged product "youscript"). */
+export const API_BASE: string = (import.meta.env.VITE_API_BASE as string | undefined) || 'https://vidhastra-backend.onrender.com';

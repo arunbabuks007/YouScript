@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { Link } from 'react-router-dom';
 import { CONTACT_EMAIL, POLICY_UPDATED, STORE_URL, SUPPORT_MAIL } from '../config';
 
 type Tone = 'green' | 'blue' | 'yellow';
@@ -47,7 +48,7 @@ export function Privacy() {
         <section id="overview">
           <h2>1. Overview &amp; summary</h2>
           <Box tone="green" title="✅ Short version">
-            <p>YouScript shows a YouTube video’s transcript inside your browser. <strong>I do not collect, transmit or sell any personal data, browsing history, page content or usage information. YouScript has no server to send it to, and it does not use any AI service.</strong></p>
+            <p>YouScript shows a YouTube video’s transcript inside your browser. <strong>I do not collect, transmit or sell any personal data, browsing history, page content or usage information. The extension has no server to send it to, and it does not use any AI service.</strong></p>
           </Box>
           <p>YouScript (“the Extension”, “I”, “my”) is a Chrome extension that adds a card to youtube.com video pages. The card shows the transcript YouTube already has for the video and lets you search it, jump to a moment, switch its language, and copy or download it. It is built and maintained by an independent developer and is not affiliated with YouTube or Google LLC.</p>
         </section>
@@ -62,6 +63,7 @@ export function Privacy() {
             <li><strong>Your settings</strong> — three on/off choices: load the transcript automatically, show timestamps, follow the video while it plays.</li>
             <li><strong>The YouTube page you are looking at</strong> — the Extension reads the transcript lines and the list of caption languages that YouTube already shows or holds for the video you have open. This happens on your device and the text is shown in the card; it is not stored or sent to me.</li>
             <li><strong>Diagnostic reports</strong> — if the card cannot read a transcript it offers a “Copy details” button. The report lists element names, counts and the video’s id. It stays on your screen and in your clipboard if you press the button. It is sent to nobody unless you choose to paste it into an email to me.</li>
+            <li><strong>Boosts (website only)</strong> — if you choose to send a tip on this website’s <Link to="/boost">boost page</Link>, the amount and the optional name and message you type are stored so the boost can be recorded. The extension itself never sees or sends any of this.</li>
             <li><strong>Downloads</strong> — “.txt” and “.srt” save the transcript you are viewing to your own computer through the browser’s normal download. The file never passes through any server.</li>
           </ul>
           <Box tone="yellow" title="⚠️ Note">
@@ -90,7 +92,10 @@ export function Privacy() {
           <Box tone="blue" title="🌐 The extension itself contacts no server of mine">
             <p>The Extension has no backend and sends no data to the developer or to any analytics, advertising, AI or crash-reporting service. It loads no remote code: everything it runs is in the installed extension package.</p>
           </Box>
-          <p>The only network requests it causes go to YouTube itself, from your own YouTube tab:</p>
+          <Box tone="yellow" title="💛 The optional boost">
+            <p>The extension’s popup has a “Boost YouScript” link that simply opens this website’s <Link to="/boost">boost page</Link> in a new tab. That page — not the extension — is where a tip is made, and only if you choose to. Payments are handled by Razorpay; YouScript never sees your card or UPI details. The amount and the optional name and message are sent to my server so the tip can be recorded.</p>
+          </Box>
+          <p>The only network requests the <em>extension</em> causes go to YouTube itself, from your own YouTube tab:</p>
           <ul>
             <li><strong>The language you choose.</strong> When you pick a language in the Language menu, the Extension asks YouTube’s caption service (<code>www.youtube.com/api/timedtext</code>) for the lines in that language. This is the same service YouTube’s own player uses for subtitles, and it uses the same short-lived token the player itself obtained.</li>
             <li><strong>Turning captions on for a moment.</strong> If the player has not yet requested captions when you pick a language, the Extension switches the video’s captions button on briefly so the player obtains that token, then puts the button back as it was.</li>
@@ -103,7 +108,7 @@ export function Privacy() {
             <li>The three settings are stored with <code>chrome.storage.sync</code>, which is managed by your browser.</li>
             <li>The developer has no access to your browser’s storage and receives nothing from it.</li>
             <li>The transcript itself is held in the page’s memory while the video is open and is discarded when you leave. It is never written to disk by the Extension, except when you press a download button.</li>
-            <li>Nothing about your browsing or settings is stored on any server operated by me.</li>
+            <li>Nothing about your browsing or settings is stored on any server operated by me. The only exception is a tip you choose to send on the boost page (section 4).</li>
           </ul>
         </section>
 

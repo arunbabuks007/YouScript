@@ -152,6 +152,17 @@ export function Home() {
         </div>
       </section>
 
+      <section className="section wrap">
+        <div className="boost-cta">
+          <div className="ico big"><Icon name="rocket" size={32} /></div>
+          <div>
+            <h2>Enjoying YouScript?</h2>
+            <p>It’s free, and it will stay free. If it saved you some time, a small boost helps me keep improving it.</p>
+          </div>
+          <Link className="btn btn-primary btn-lg" to="/boost">Boost YouScript</Link>
+        </div>
+      </section>
+
       <section className="final">
         <div className="wrap center">
           <h2>Stop scrubbing. Start reading.</h2>

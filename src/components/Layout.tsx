@@ -45,6 +45,7 @@ export function Layout() {
             <Link to="/#how">How it works</Link>
             <Link to="/#faq">FAQ</Link>
             <NavLink to="/support">Help</NavLink>
+            <NavLink to="/boost">Boost</NavLink>
             <NavLink to="/privacy">Privacy</NavLink>
             <a className="btn btn-primary btn-sm" href={STORE_URL} target="_blank" rel="noopener">
               <Icon name="chrome" size={16} /> Add to Chrome
@@ -70,6 +71,7 @@ export function Layout() {
               <Link to="/features">All features</Link>
               <Link to="/#how">How it works</Link>
               <Link to="/#faq">FAQ</Link>
+              <Link to="/boost">Boost YouScript</Link>
             </div>
             <div>
               <h4>Legal &amp; help</h4>
