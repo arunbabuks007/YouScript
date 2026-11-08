@@ -2,9 +2,9 @@ import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom/server';
 import App from './App';
 import { FAQS } from './data';
-import { ROUTES, SITE_URL, STORE_URL } from './config';
+import { ROUTES, SITE_URL, STORE_URL, IMG_V } from './config';
 
-export { ROUTES, SITE_URL, STORE_URL };
+export { ROUTES, SITE_URL, STORE_URL, IMG_V };
 
 export function render(url: string): string {
   return renderToString(<StaticRouter location={url}><App /></StaticRouter>);
@@ -23,8 +23,8 @@ export function homeJsonLd(): object[] {
       url: SITE_URL + '/',
       downloadUrl: STORE_URL,
       installUrl: STORE_URL,
-      image: SITE_URL + '/img/og.jpg',
-      screenshot: ['watch', 'card', 'search', 'languages', 'plain'].map(n => `${SITE_URL}/img/${n}.jpg`),
+      image: SITE_URL + '/img/og.jpg?v=' + IMG_V,
+      screenshot: ['watch', 'card', 'search', 'languages', 'plain'].map(n => `${SITE_URL}/img/${n}.jpg?v=${IMG_V}`),
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
       featureList: ['Transcript beside the video', 'Search the transcript', 'Click a line to jump to that moment', 'Follows the video as it plays', 'Switch to any language YouTube offers', 'Copy with or without timestamps', 'Download as .txt or .srt', 'No account, no server, no AI'],
     },

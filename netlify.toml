@@ -26,4 +26,4 @@
 [[headers]]
   for = "/img/*"
   [headers.values]
-    Cache-Control = "public, max-age=2592000"
+    Cache-Control = "public, max-age=0, must-revalidate"

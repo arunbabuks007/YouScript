@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FAQS, FEATURES, STATS } from '../data';
-import { STORE_URL } from '../config';
+import { STORE_URL, img } from '../config';
 import { Icon } from '../components/Icon';
 
 function Browser({ src, alt, label }: { src: string; alt: string; label?: string }) {
@@ -60,8 +60,8 @@ export function Home() {
             {STATS.map(s => <li key={s.label}><strong>{s.value}</strong> {s.label}</li>)}
           </ul>
           <div className="hero-visual">
-            <Browser src="/img/watch.jpg" alt="A YouTube video with the YouScript transcript card in the sidebar, showing timestamps and lyrics" label="YouTube with YouScript" />
-            <figure className="pop hero-pop"><img src="/img/card.jpg" alt="The YouScript card: a language menu, a search box, Copy, .txt and .srt buttons and the timestamped transcript" width={420} height={637} /></figure>
+            <Browser src={img('watch.jpg')} alt="A YouTube video with the YouScript transcript card in the sidebar, showing timestamps and lyrics" label="YouTube with YouScript" />
+            <figure className="pop hero-pop"><img src={img('card.jpg')} alt="The YouScript card: a language menu, a search box, Copy, .txt and .srt buttons and the timestamped transcript" width={420} height={637} /></figure>
           </div>
         </div>
       </section>
@@ -103,25 +103,25 @@ export function Home() {
         kicker="Find the moment" title="Remember a word? Find the minute."
         text="Type any word from the video and the list shrinks to just the lines that contain it, each with its timestamp. Click one and you are there. No more scrubbing through an hour of video."
         points={['Ignores capital letters and accents', 'Shows how many lines matched', 'Click a line or its time to jump the video']}
-        img="/img/search.jpg" alt="The YouScript card with “never gonna” typed in the search box and only the matching lines shown"
+        img={img('search.jpg')} alt="The YouScript card with “never gonna” typed in the search box and only the matching lines shown"
       />
       <Showcase flip
         kicker="Any language" title="Read it in the language you think in."
         text="Open the Language menu and you will see the video’s own caption languages, plus every language YouTube can translate them into. Choose one and the transcript changes, timestamps and all."
         points={['The video’s own caption tracks, listed by name', 'Around 150 more under “Translated by YouTube”', 'Copy and download use the language you are viewing']}
-        img="/img/languages.jpg" alt="The YouScript card with the Language menu open, listing English, German, Japanese, Spanish and a long list of languages translated by YouTube"
+        img={img('languages.jpg')} alt="The YouScript card with the Language menu open, listing English, German, Japanese, Spanish and a long list of languages translated by YouTube"
       />
       <Showcase
         kicker="Take it with you" title="Clean text, or real subtitles."
         text="Switch timestamps off for plain text you can paste straight into your notes. Or download an .srt subtitle file with proper start and end times for your video player or editor."
         points={['One-click copy, with or without timestamps', 'Download .txt or .srt', 'The file is named after the video']}
-        img="/img/plain.jpg" alt="The YouScript card with timestamps turned off, showing clean transcript text"
+        img={img('plain.jpg')} alt="The YouScript card with timestamps turned off, showing clean transcript text"
       />
       <Showcase flip
         kicker="Your way" title="Three switches. That’s all the settings."
         text="YouScript does one thing, so it has almost nothing to configure: load the transcript automatically, show timestamps, and follow the video while it plays. Turn each on or off from the toolbar icon."
         points={['Auto-load the transcript when a video opens', 'Show or hide timestamps', 'Follow along as the video plays']}
-        img="/img/popup.png" alt="The YouScript toolbar popup with three switches: load automatically, show timestamps and follow the video" w={340} h={330}
+        img={img('popup.png')} alt="The YouScript toolbar popup with three switches: load automatically, show timestamps and follow the video" w={340} h={330}
       />
 
       {/* ── no AI ── */}

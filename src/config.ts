@@ -47,3 +47,8 @@ export const ROUTES: RouteMeta[] = [
 
 /** The backend that records tips (shared with the developer's other apps; tips are tagged product "youscript"). */
 export const API_BASE: string = (import.meta.env.VITE_API_BASE as string | undefined) || 'https://vidhastra-backend.onrender.com';
+
+/** Bump this when the screenshots in public/img change: it is added to every picture's address so browsers fetch the new files. */
+export const IMG_V = '3';
+/** Address of a picture in public/img, with the version added. */
+export const img = (name: string) => `/img/${name}?v=${IMG_V}`;

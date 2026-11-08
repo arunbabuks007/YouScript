@@ -11,14 +11,14 @@ if (!template.includes('<!--app-html-->') || !template.includes('<!--head-->')) 
   throw new Error('index.html lost its <!--head--> / <!--app-html--> markers — the pre-render cannot continue');
 }
 
-const { render, ROUTES, SITE_URL, STORE_URL, homeJsonLd } = await import(pathToFileURL(path.resolve('dist-ssr/entry-server.js')).href);
+const { render, ROUTES, SITE_URL, STORE_URL, IMG_V, homeJsonLd } = await import(pathToFileURL(path.resolve('dist-ssr/entry-server.js')).href);
 
 const NO_INDEX = new Set(['/boost']);                       // a payment form is not something to rank
 const esc = s => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 
 function head({ path: p, title, description }, extra = '') {
   const url = SITE_URL + (p === '/' ? '/' : p);
-  const image = SITE_URL + '/img/og.jpg';
+  const image = SITE_URL + '/img/og.jpg?v=' + IMG_V;
   return [
     `<title>${esc(title)}</title>`,
     `<meta name="description" content="${esc(description)}">`,
