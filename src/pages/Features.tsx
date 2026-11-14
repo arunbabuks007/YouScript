@@ -20,6 +20,18 @@ const SECTIONS: Section[] = [
     ],
   },
   {
+    id: 'chapters', title: 'Video chapters',
+    intro: 'Browse sections visually with preview thumbnails.',
+    items: [
+      'Automatic chapter detection from YouTube markers and descriptions',
+      'Preview thumbnails for every chapter with duration markers',
+      'Click any chapter to jump directly to that part of the video',
+      'Highlights the currently playing chapter as you watch',
+      'Easy tab switching between Transcript and Chapters',
+      'Can be toggled on or off anytime in Settings',
+    ],
+  },
+  {
     id: 'finding', title: 'Finding things',
     intro: 'Skip to the part you care about.',
     items: [
@@ -109,11 +121,13 @@ export function Features() {
 
         <section id="settings">
           <h2>Settings</h2>
-          <p>Click the YouScript icon in Chrome’s toolbar. There are three switches, and changes reach open YouTube tabs straight away.</p>
+          <p>Click the YouScript icon in Chrome’s toolbar. Customize your experience, and changes reach open YouTube tabs straight away.</p>
           <div className="core-grid">
             <article className="card"><h3>Load the transcript automatically</h3><p className="muted">On by default. Turn it off to load only when you press the button.</p></article>
             <article className="card"><h3>Show timestamps</h3><p className="muted">On by default. Also switchable from the card itself.</p></article>
             <article className="card"><h3>Follow the video while it plays</h3><p className="muted">On by default. Highlights the current line and scrolls to it.</p></article>
+            <article className="card"><h3>Show chapters</h3><p className="muted">On by default. Shows video chapters with preview thumbnails when available.</p></article>
+            <article className="card"><h3>Default language</h3><p className="muted">Pick your preferred language from a searchable list to auto-translate transcripts.</p></article>
           </div>
           <p style={{ marginTop: 22 }}><Link className="btn btn-ghost" to="/support">Need help? <Icon name="arrow" size={18} /></Link></p>
         </section>

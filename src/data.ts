@@ -4,14 +4,14 @@ export interface Feature { icon: IconName; title: string; text: string; }
 
 export const FEATURES: Feature[] = [
   { icon: 'panel', title: 'The transcript, beside the video', text: 'Open any YouTube video and a card at the top of the sidebar already shows the full transcript. No button to hunt for, no pop-up to open, no page to leave.' },
-  { icon: 'clock', title: 'Click a line, jump there', text: 'Every line has its timestamp. Click the line or the time and the video jumps to that exact moment, even if it was paused.' },
+  { icon: 'clock', title: 'Video chapters with thumbnails', text: 'Browse video chapters with preview images and timestamps. Click any chapter to jump straight to that part of the video.' },
   { icon: 'search', title: 'Search inside the video', text: 'Type a word and only the lines that contain it stay. It ignores capital letters and accents, so “cafe” finds “café”. Perfect for finding the one minute you remember.' },
   { icon: 'pulse', title: 'Follows along as it plays', text: 'The line being spoken is highlighted and the list scrolls with it. Scroll yourself and it politely waits, then picks the thread up again.' },
-  { icon: 'layers', title: 'Any language YouTube offers', text: 'Pick one of the video’s own caption languages, or any of the roughly 150 languages YouTube can translate them into. The translation is YouTube’s own, so it is instant and free.' },
+  { icon: 'layers', title: 'Any language YouTube offers', text: 'Pick one of the video’s own caption languages, or any of the roughly 150 languages YouTube can translate them into. You can even choose a default language in settings to translate automatically.' },
   { icon: 'comment', title: 'Copy it your way', text: 'One click copies the whole transcript, with or without timestamps. Turn timestamps off and you get clean text ready to paste into notes.' },
   { icon: 'download', title: 'Download as text or subtitles', text: 'Save the transcript as a plain .txt file, or as an .srt subtitle file that opens in any video player or editor.' },
   { icon: 'palette', title: 'Looks right in light and dark', text: 'The card follows YouTube’s theme and sits in the sidebar like it belongs there. Collapse it when you do not need it.' },
-  { icon: 'shield', title: 'Private by design', text: 'No account, no server of ours, no analytics. The extension only talks to YouTube, and your three settings live in your browser.' },
+  { icon: 'shield', title: 'Private by design', text: 'No account, no server of ours, no analytics. The extension only talks to YouTube, and your settings live in your browser.' },
 ];
 
 export interface Faq { q: string; a: string; }
@@ -20,6 +20,14 @@ export const FAQS: Faq[] = [
   {
     q: 'How do I get the transcript of a YouTube video?',
     a: 'Install YouScript and open any YouTube video. The transcript appears in a card at the top of the sidebar, ready to read, search, copy or download. You do not need to click anything first.',
+  },
+  {
+    q: 'Does YouScript support video chapters?',
+    a: 'Yes. When a video has chapters, a Chapters tab appears with preview thumbnails and timestamps. Click any chapter to jump to that moment, or toggle chapters on/off anytime in your extension settings.',
+  },
+  {
+    q: 'Can I set a default language for all transcripts?',
+    a: 'Yes. Click the YouScript icon in your browser toolbar, open the Default Language dropdown, and pick your preferred language (e.g. Tamil, Spanish, Hindi). Whenever you open a video with that language available, YouScript automatically switches to it.',
   },
   {
     q: 'Is YouScript free?',

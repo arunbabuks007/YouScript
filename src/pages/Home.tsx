@@ -118,10 +118,10 @@ export function Home() {
         img={img('plain.jpg')} alt="The YouScript card with timestamps turned off, showing clean transcript text"
       />
       <Showcase flip
-        kicker="Your way" title="Three switches. That’s all the settings."
-        text="YouScript does one thing, so it has almost nothing to configure: load the transcript automatically, show timestamps, and follow the video while it plays. Turn each on or off from the toolbar icon."
-        points={['Auto-load the transcript when a video opens', 'Show or hide timestamps', 'Follow along as the video plays']}
-        img={img('popup.png')} alt="The YouScript toolbar popup with three switches: load automatically, show timestamps and follow the video" w={340} h={440}
+        kicker="Your way" title="Simple settings. That’s all."
+        text="YouScript does what you need, so settings stay clean: load the transcript automatically, show timestamps, follow the video, view chapters with thumbnails, and choose your default language. Set your preferences from the toolbar icon."
+        points={['Auto-load the transcript when a video opens', 'Show or hide timestamps & chapters', 'Set your default language to auto-translate', 'Follow along as the video plays']}
+        img={img('popup.png')} alt="The YouScript toolbar popup with switches for auto-load, timestamps, follow video, chapters, and default language" w={340} h={440}
       />
 
       {/* ── no AI ── */}

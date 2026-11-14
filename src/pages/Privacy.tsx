@@ -60,7 +60,7 @@ export function Privacy() {
           </Box>
           <p>The only information the Extension ever works with is:</p>
           <ul>
-            <li><strong>Your settings</strong> — three on/off choices: load the transcript automatically, show timestamps, follow the video while it plays.</li>
+            <li><strong>Your settings</strong> — display choices: load the transcript automatically, show timestamps, follow the video while it plays, show chapters, and default language.</li>
             <li><strong>The YouTube page you are looking at</strong> — the Extension reads the transcript lines and the list of caption languages that YouTube already shows or holds for the video you have open. This happens on your device and the text is shown in the card; it is not stored or sent to me.</li>
             <li><strong>Diagnostic reports</strong> — if the card cannot read a transcript it offers a “Copy details” button. The report lists element names, counts and the video’s id. It stays on your screen and in your clipboard if you press the button. It is sent to nobody unless you choose to paste it into an email to me.</li>
             <li><strong>Boosts (website only)</strong> — if you choose to send a tip on this website’s <Link to="/boost">boost page</Link>, the amount and the optional name and message you type are stored so the boost can be recorded. The extension itself never sees or sends any of this.</li>
